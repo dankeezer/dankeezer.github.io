@@ -16,31 +16,7 @@
   </p>
   <p>
     <img src="images/counter-0.gif" id="counterDigit-5"><img src="images/counter-0.gif" id="counterDigit-4"><img src="images/counter-0.gif" id="counterDigit-3"><img src="images/counter-0.gif" id="counterDigit-2"><img src="images/counter-0.gif" id="counterDigit-1"><img src="images/counter-0.gif" id="counterDigit-0">
-
-    <img src="images/counter-0.gif" width="0">
-    <img src="images/counter-1.gif" width="0">
-    <img src="images/counter-2.gif" width="0">
-    <img src="images/counter-3.gif" width="0">
-    <img src="images/counter-4.gif" width="0">
-    <img src="images/counter-5.gif" width="0">
-    <img src="images/counter-6.gif" width="0">
-    <img src="images/counter-7.gif" width="0">
-    <img src="images/counter-8.gif" width="0">
-    <img src="images/counter-9.gif" width="0">
   </p>
-  <script>
-    window.onload = visitor();
-
-    function updateCounterDigits(value, index, array) {
-      document.getElementById(`counterDigit-${index}`).src = `images/counter-${value}.gif`;
-    }
-
-    function visitor() {
-      var visitorNumberArray = Math.floor(Math.random() * 999999).toString().split("");
-      visitorNumberArray.forEach(updateCounterDigits)
-    }
-  </script>
+  <script type="text/javascript" src="scripts/counter.js"></script>
 </body>
 </html>
-
-
