@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
   <title>Dan’s website</title>
@@ -14,7 +15,20 @@
     <img src="images/whitebal.gif"> <a href="mailto:dankeezer+dotcom@gmail.com">Contact</a>
   </p>
   <p>
-  <img src="images/counter.gif">
+    <img src="images/counter-0.gif" id="counterDigit-5"><img src="images/counter-0.gif" id="counterDigit-4"><img src="images/counter-0.gif" id="counterDigit-3"><img src="images/counter-0.gif" id="counterDigit-2"><img src="images/counter-0.gif" id="counterDigit-1"><img src="images/counter-0.gif" id="counterDigit-0">
+  </p>
+  <script>
+    window.onload = visitor();
+
+    function updateCounterDigits(value, index, array) {
+      document.getElementById(`counterDigit-${index}`).src = `images/counter-${value}.gif`;
+    }
+
+    function visitor() {
+      var visitorNumberArray = Math.floor(Math.random() * 999999).toString().split("");
+      visitorNumberArray.forEach(updateCounterDigits)
+    }
+  </script>
 </body>
 </html>
 
