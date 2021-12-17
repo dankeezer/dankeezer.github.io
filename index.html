@@ -9,12 +9,25 @@
   <center><h1>Dan Keezer’s Personal Website</h1></center>
   <p>My name is Dan, I make websites professionally.</p>
   <p>
-    <img src="whitebal.gif"> <a href="https://www.linkedin.com/in/dankeezer/">LinkedIn</a></br>
-    <img src="whitebal.gif"> <a href="https://github.com/dankeezer">GitHub</a></br>
-    <img src="whitebal.gif"> <a href="mailto:dankeezer+dotcom@gmail.com">Contact</a>
+    <img src="images/whitebal.gif"> <a href="https://www.linkedin.com/in/dankeezer/">LinkedIn</a></br>
+    <img src="images/whitebal.gif"> <a href="https://github.com/dankeezer">GitHub</a></br>
+    <img src="images/whitebal.gif"> <a href="mailto:dankeezer+dotcom@gmail.com">Contact</a>
   </p>
   <p>
-  <img src="counter.gif">
+  <img src="images/counter.gif">
+
+  <p>The number of visitors is : <span id="cntr">0</span></p>
+
+  <script>
+    function counter_fn() {
+      var counter = document.getElementById("cntr");
+      var count = 0;
+      count = parseInt(counter.innerHTML);
+      count = count + 1;
+      counter.innerHTML = count;
+    }
+    window.onload = counter_fn;
+  </script>
 </body>
 </html>
 
