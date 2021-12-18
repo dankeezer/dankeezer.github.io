@@ -7,7 +7,7 @@ function visitor() {
   }
   preloadImages([counterDigits]);
 
-  var visitorNumberArray = Math.floor(Math.random() * 999999).toString().split("");
+  var visitorNumberArray = Math.floor(Math.random() * 99999).toString().split("");
   var zeros = (visitorNumberArray.length - 6) * -1;
 
   for(var i = 0; i < zeros; i++){
