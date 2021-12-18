@@ -17,10 +17,11 @@ function visitor() {
   visitorNumberArray.forEach(updateCounterDigits);
 }
 
-function preloadImages(array) {
-  for (var i = 0; i < array.length; i++) {
-    array[i] = new Image();
-    array[i].src = preloadImages.arguments[i];
+function preloadImages() {
+  var images = [];
+  for (var i = 0; i < arguments.length; i++) {
+    images[i] = new Image();
+    images[i].src = preloadImages.arguments[i];
   }
 }
 
