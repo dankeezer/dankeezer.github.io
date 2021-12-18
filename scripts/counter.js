@@ -3,9 +3,9 @@ window.onload = visitor();
 function visitor() {
   var counterDigits = []
   for(var i = 0; i < 10; i++){
-    counterDigits.concat(`../images/counter-${i}.gif`);
+    counterDigits = counterDigits.concat(`../images/counter-${i}.gif`);
   }
-  preloadImages([counterDigits]);
+  preloadImages(counterDigits);
 
   var visitorNumberArray = Math.floor(Math.random() * 99999).toString().split("");
   var zeros = (visitorNumberArray.length - 6) * -1;
@@ -18,21 +18,9 @@ function visitor() {
 }
 
 function preloadImages(array) {
-  if (!preloadImages.list) {
-    preloadImages.list = [];
-  }
-
-  var list = preloadImages.list;
   for (var i = 0; i < array.length; i++) {
-    var img = new Image();
-    img.onload = function() {
-      var index = list.indexOf(this);
-      if (index !== -1) {
-        list.splice(index, 1);
-      }
-    }
-    list.push(img);
-    img.src = array[i];
+    array[i] = new Image();
+    array[i].src = preloadImages.arguments[i];
   }
 }
 
