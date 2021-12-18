@@ -3,12 +3,12 @@ window.onload = visitor();
 function visitor() {
   var counterDigits = []
   for(var i = 0; i < 10; i++){
-    counterDigits.concat(`../images/counter-${i}.gif`)
+    counterDigits.concat(`../images/counter-${i}.gif`);
   }
   preloadImages([counterDigits]);
 
   var visitorNumberArray = Math.floor(Math.random() * 999999).toString().split("");
-  var zeros = (visitorNumberArray.length - 6) * -1
+  var zeros = (visitorNumberArray.length - 6) * -1;
 
   for(var i = 0; i < zeros; i++){
     visitorNumberArray = ["0"].concat(visitorNumberArray);
